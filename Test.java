@@ -20,6 +20,15 @@ public class Test {
 
         for(int i=0;i<N;i++)
             new Writer(barrier).start();
+
+        String a = Test1.B;
+        Test1.B = new String("I am xiabo");
+        String b = a;
+        System.out.println("b " + b);
+    }
+
+    static final class Test1 {
+        public static String B;
     }
 
     static class Writer extends Thread{
