@@ -86,6 +86,7 @@ void remove(struct bs_tree* tree, int data) {
     } else {
         pp->right = child;
     }
+    delete p;
 }
 
 struct bs_tree* search(struct bs_tree* tree, int data) {
